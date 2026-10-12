@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AAU Admin Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <img src="assets/AAU.png" alt="AAU logo" class="brand-logo">
+        <div>
+          <strong>AAU Admin</strong>
+          <span>Association of African Universities</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html" class="active"><i data-lucide="home"></i>Dashboard</a>
+        <a href="universities.html"><i data-lucide="university"></i>Universities</a>
+        <a href="applications.html"><i data-lucide="clipboard-list"></i>Applications</a>
+        <a href="events.html"><i data-lucide="calendar"></i>Events</a>
+        <a href="#"><i data-lucide="graduation-cap"></i>Programmes</a>    
+        <a href="#"><i data-lucide="handshake"></i>Partnerships</a>
+         <p class="nav-label">Account</p>
+        <a href="settings.html">
+          
+        <a href="#"><i data-lucide="settings"></i>Settings</a>
+      </nav>
+
+
+      <a href="#" class="logout"><i data-lucide="log-out"></i>Log out</a>
+    </aside>
+
+    <div class="main">
+
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">
+            <i data-lucide="menu"></i>
+          </button>
+
+          <div class="search" id="search">
+            <label class="search-scope">
+              <select id="searchScope" aria-label="Search in">
+                <option>All</option>
+                <option>Universities</option>
+                <option>Events</option>
+                <option>Reports</option>
+              </select>
+              <i data-lucide="chevron-down"></i>
+            </label>
+
+            <div class="search-field">
+              <i data-lucide="search" class="search-icon"></i>
+              <input id="searchInput" type="text" placeholder="Search universities, events, reports" autocomplete="off" aria-label="Search">
+              <kbd>/</kbd>
+              <button type="button" id="searchClear" class="search-clear" aria-label="Clear search">
+                <i data-lucide="x"></i>
+              </button>
+            </div>
+
+            <div class="search-results" id="searchResults" hidden></div>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <div class="help-wrap" id="helpWrap">
+  <button class="icon-btn" id="helpBtn" type="button"
+          aria-label="Help and support" aria-haspopup="true"
+          aria-expanded="false" aria-controls="helpMenu">
+    <i data-lucide="help-circle"></i>
+  </button>
+
+  <div class="help-menu" id="helpMenu" role="menu">
+    <p class="hm-title">Help &amp; Support</p>
+
+    <a href="help.html" class="hm-item" role="menuitem">
+      <span class="hm-icon"><i data-lucide="book-open"></i></span>
+      <span class="hm-text"><strong>Help Centre</strong><small>Access guides and instructions for using the admin portal.</small></span>
+    </a>
+
+    <a href="faq.html" class="hm-item" role="menuitem">
+      <span class="hm-icon"><i data-lucide="help-circle"></i></span>
+      <span class="hm-text"><strong>Frequently Asked Questions</strong><small>View answers to common administrator questions.</small></span>
+    </a>
+
+    <a href="guide.html" class="hm-item" role="menuitem">
+      <span class="hm-icon"><i data-lucide="book-marked"></i></span>
+      <span class="hm-text"><strong>Admin Guide</strong><small>View detailed instructions for managing the AAU Admin Portal.</small></span>
+    </a>
+
+    <a href="support.html" class="hm-item" role="menuitem">
+      <span class="hm-icon"><i data-lucide="message-circle"></i></span>
+      <span class="hm-text"><strong>Contact Support</strong><small>Contact the AAU ICT/support team for assistance.</small></span>
+    </a>
+
+    <div class="hm-sep"></div>
+
+    <a href="about.html" class="hm-item hm-about" role="menuitem">
+      <span class="hm-icon"><i data-lucide="info"></i></span>
+      <span class="hm-text"><strong>About AAU Admin Portal</strong></span>
+    </a>
+  </div>
+</div>
+          <button class="icon-btn has-dot" type="button" aria-label="Notifications"><i data-lucide="bell"></i></button>
+
+          <div class="profile-wrap" id="profileWrap">
+            <button class="profile" id="profileBtn" type="button"
+                    aria-haspopup="true" aria-expanded="false" aria-controls="profileMenu">
+              <div class="avatar">JO</div>
+              <div class="profile-text">
+                <strong>John Owusu</strong>
+                <span>Administrator</span>
+              </div>
+              <i data-lucide="chevron-down" class="chev"></i>
+            </button>
+
+            <div class="profile-menu" id="profileMenu" role="menu">
+              <div class="pm-head">
+                <div class="avatar avatar-lg">JO</div>
+                <div class="pm-id">
+                  <strong>John Owusu</strong>
+                  <span>Administrator</span>
+                  <small>john.owusu@aau.edu.gh</small>
+                </div>
+              </div>
+              <a href="profile.html" class="pm-edit">Edit Profile</a>
+              <div class="pm-list">
+                <a href="profile.html" role="menuitem"><i data-lucide="user"></i>My profile</a>
+                <a href="profile.html#security" role="menuitem"><i data-lucide="shield-check"></i>Security</a>
+                <a href="profile.html#activity" role="menuitem"><i data-lucide="history"></i>Activity log</a>
+              </div>
+              <div class="pm-sep"></div>
+              <a href="#" class="pm-logout" role="menuitem"><i data-lucide="log-out"></i>Log out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <h1>Dashboard</h1>
+        <p class="subtitle">Membership and activity across the AAU Network</p>
+
+        <section class="stats">
+          <a class="stat-card" href="universities.html">
+            <div class="stat-top">
+              <div class="stat-icon"><i data-lucide="university"></i></div>
+              <div class="stat-text">
+                <strong>457</strong>
+                <span>Member universities</span>
+                <em><i data-lucide="trending-up"></i>12 joined this year</em>
+              </div>
+            </div>
+            <hr>
+            <div class="stat-split">
+              <div><b>413</b><span>Full members</span></div>
+              <div><b>44</b><span>Associate members</span></div>
+            </div>
+          </a>
+
+          <a class="stat-card" href="universities.html">
+            <div class="stat-top">
+              <div class="stat-icon"><i data-lucide="globe"></i></div>
+              <div class="stat-text">
+                <strong>46</strong>
+                <span>Registered countries</span>
+                <em><i data-lucide="trending-up"></i>2 new in 2026</em>
+              </div>
+            </div>
+            <hr>
+            <p class="stat-note">These countries include countries across the continent and the world at large.</p>
+          </a>
+
+          <a class="stat-card" href="events.html">
+            <div class="stat-top">
+              <div class="stat-icon"><i data-lucide="calendar"></i></div>
+              <div class="stat-text">
+                <strong>9</strong>
+                <span>Upcoming events</span>
+                <em><i data-lucide="trending-up"></i>3 this month</em>
+              </div>
+            </div>
+            <hr>
+          </a>
+        </section>
+
+        <section class="dash-row">
+          <a class="panel" href="universities.html">
+            <div class="panel-head">
+              <div class="stat-icon"><i data-lucide="university"></i></div>
+              <div>
+                <h2>Members by country</h2>
+                <p>Countries with 14 or more member universities</p>
+              </div>
+            </div>
+            <div class="bars" id="bars"></div>
+          </a>
+
+          <a class="panel" href="events.html">
+            <h2 class="panel-title">Upcoming events</h2>
+            <ul class="event-list" id="eventList"></ul>
+          </a>
+        </section>
+      </main>
+
+    </div>
+  </div>
+
+  <div class="scrim" id="scrim"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

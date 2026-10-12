@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | AAU Admin Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/help-pages.css">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <img src="assets/AAU.png" alt="AAU logo" class="brand-logo">
+        <div>
+          <strong>AAU Admin</strong>
+          <span>Association of African Universities</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html"><i data-lucide="home"></i>Dashboard</a>
+        <a href="universities.html"><i data-lucide="university"></i>Universities</a>
+        <a href="applications.html"><i data-lucide="clipboard-list"></i>Applications</a>
+        <a href="events.html"><i data-lucide="calendar"></i>Events</a>
+        <a href="#"><i data-lucide="graduation-cap"></i>Programmes</a>
+        <a href="#"><i data-lucide="newspaper"></i>News &amp; media</a>
+        <a href="#"><i data-lucide="file-text"></i>Publications</a>
+        <a href="#"><i data-lucide="handshake"></i>Partnerships</a>
+        <a href="#"><i data-lucide="settings"></i>Settings</a>
+      </nav>
+
+      <a href="#" class="logout"><i data-lucide="log-out"></i>Log out</a>
+    </aside>
+
+    <div class="main">
+
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">
+            <i data-lucide="menu"></i>
+          </button>
+
+          <div class="search" id="search">
+            <label class="search-scope">
+              <select id="searchScope" aria-label="Search in">
+                <option>All</option>
+                <option>Universities</option>
+                <option>Events</option>
+                <option>Reports</option>
+              </select>
+              <i data-lucide="chevron-down"></i>
+            </label>
+
+            <div class="search-field">
+              <i data-lucide="search" class="search-icon"></i>
+              <input id="searchInput" type="text" placeholder="Search universities, events, reports" autocomplete="off" aria-label="Search">
+              <kbd>/</kbd>
+              <button type="button" id="searchClear" class="search-clear" aria-label="Clear search">
+                <i data-lucide="x"></i>
+              </button>
+            </div>
+
+            <div class="search-results" id="searchResults" hidden></div>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+
+          <div class="help-wrap" id="helpWrap">
+            <button class="icon-btn" id="helpBtn" type="button"
+                    aria-label="Help and support" aria-haspopup="true"
+                    aria-expanded="false" aria-controls="helpMenu">
+              <i data-lucide="help-circle"></i>
+            </button>
+
+            <div class="help-menu" id="helpMenu" role="menu">
+              <p class="hm-title">Help &amp; Support</p>
+
+              <a href="help.html" class="hm-item" role="menuitem">
+                <span class="hm-icon"><i data-lucide="book-open"></i></span>
+                <span class="hm-text"><strong>Help Centre</strong><small>Access guides and instructions for using the admin portal.</small></span>
+              </a>
+
+              <a href="faq.html" class="hm-item" role="menuitem">
+                <span class="hm-icon"><i data-lucide="help-circle"></i></span>
+                <span class="hm-text"><strong>Frequently Asked Questions</strong><small>View answers to common administrator questions.</small></span>
+              </a>
+
+              <a href="guide.html" class="hm-item" role="menuitem">
+                <span class="hm-icon"><i data-lucide="book-marked"></i></span>
+                <span class="hm-text"><strong>Admin Guide</strong><small>View detailed instructions for managing the AAU Admin Portal.</small></span>
+              </a>
+
+              <a href="support.html" class="hm-item" role="menuitem">
+                <span class="hm-icon"><i data-lucide="message-circle"></i></span>
+                <span class="hm-text"><strong>Contact Support</strong><small>Contact the AAU ICT/support team for assistance.</small></span>
+              </a>
+
+              <div class="hm-sep"></div>
+
+              <a href="about.html" class="hm-item hm-about" role="menuitem">
+                <span class="hm-icon"><i data-lucide="info"></i></span>
+                <span class="hm-text"><strong>About AAU Admin Portal</strong></span>
+              </a>
+            </div>
+          </div>
+
+          <button class="icon-btn has-dot" type="button" aria-label="Notifications"><i data-lucide="bell"></i></button>
+
+          <div class="profile-wrap" id="profileWrap">
+            <button class="profile" id="profileBtn" type="button"
+                    aria-haspopup="true" aria-expanded="false" aria-controls="profileMenu">
+              <div class="avatar">JO</div>
+              <div class="profile-text">
+                <strong>John Owusu</strong>
+                <span>Administrator</span>
+              </div>
+              <i data-lucide="chevron-down" class="chev"></i>
+            </button>
+
+            <div class="profile-menu" id="profileMenu" role="menu">
+              <div class="pm-head">
+                <div class="avatar avatar-lg">JO</div>
+                <div class="pm-id">
+                  <strong>John Owusu</strong>
+                  <span>Administrator</span>
+                  <small>john.owusu@aau.edu.gh</small>
+                </div>
+              </div>
+              <a href="profile.html" class="pm-edit">Edit Profile</a>
+              <div class="pm-list">
+                <a href="profile.html" role="menuitem"><i data-lucide="user"></i>My profile</a>
+                <a href="profile.html#security" role="menuitem"><i data-lucide="shield-check"></i>Security</a>
+                <a href="profile.html#activity" role="menuitem"><i data-lucide="history"></i>Activity log</a>
+              </div>
+              <div class="pm-sep"></div>
+              <a href="#" class="pm-logout" role="menuitem"><i data-lucide="log-out"></i>Log out</a>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="page-title">
+          <div class="stat-icon"><i data-lucide="help-circle"></i></div>
+          <div><h1>Frequently Asked Questions</h1><p class="subtitle">Find answers to common administrator questions.</p></div>
+        </div>
+
+        <label class="uni-search wide">
+          <i data-lucide="search"></i>
+          <input id="faqSearch" type="text" placeholder="Search FAQs..." autocomplete="off" aria-label="Search FAQs">
+        </label>
+
+        <div class="chips" id="faqChips">
+          <button class="chip on" type="button" data-cat="All">All</button>
+          <button class="chip" type="button" data-cat="Membership">Membership</button>
+          <button class="chip" type="button" data-cat="Portal">Portal</button>
+          <button class="chip" type="button" data-cat="Contact">Contact</button>
+        </div>
+
+        <section class="faq-list" id="faqList">
+          <div class="faq-item" data-cat="Membership">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Who can join the AAU?</span><i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-a"><p>Membership is open to universities and other institutions of higher education and research in Africa.</p></div>
+          </div>
+          <div class="faq-item" data-cat="Membership">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>What are the membership categories?</span><i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-a"><p>There are two categories: Full members and Associate members.</p></div>
+          </div>
+          <div class="faq-item" data-cat="Membership">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>When was the AAU founded?</span><i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-a"><p>The AAU was founded in Rabat, Morocco on 12 November 1967. Its Secretariat has been hosted in Ghana since 1970.</p></div>
+          </div>
+          <div class="faq-item" data-cat="Contact">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>Where is the AAU Secretariat located?</span><i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-a"><p>Trinity Avenue, next to NCTE, NAB and NAPBTEX, East Legon, Accra. Postal address: P.O. Box AN 5744, Accra-North, Ghana.</p></div>
+          </div>
+          <div class="faq-item" data-cat="Portal">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>How do I find a university in the portal?</span><i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-a"><p>Open Universities in the sidebar, then type a name, country, year or status into the search box.</p></div>
+          </div>
+          <div class="faq-item" data-cat="Portal">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>How do I review a membership application?</span><i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-a"><p>Open Applications in the sidebar, choose an application, check its documents, then approve or reject it.</p></div>
+          </div>
+          <div class="faq-item" data-cat="Contact">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span>How do I contact support?</span><i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-a"><p>Choose Contact Support from the Help menu and send a support request to the AAU ICT/support team.</p></div>
+          </div>
+        </section>
+        <p class="uni-empty" id="faqEmpty" hidden>No questions match your search.</p>
+      </main>
+
+    </div>
+  </div>
+
+  <div class="scrim" id="scrim"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
